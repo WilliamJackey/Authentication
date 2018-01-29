@@ -1,0 +1,10 @@
+C:\sourceCode\acme-widget\bin\Debug\netcoreapp2.0\AcmeWidget.deps.json
+C:\sourceCode\acme-widget\bin\Debug\netcoreapp2.0\AcmeWidget.runtimeconfig.json
+C:\sourceCode\acme-widget\bin\Debug\netcoreapp2.0\AcmeWidget.runtimeconfig.dev.json
+C:\sourceCode\acme-widget\bin\Debug\netcoreapp2.0\AcmeWidget.dll
+C:\sourceCode\acme-widget\bin\Debug\netcoreapp2.0\AcmeWidget.pdb
+C:\sourceCode\acme-widget\obj\Debug\netcoreapp2.0\AcmeWidget.csproj.CoreCompileInputs.cache
+C:\sourceCode\acme-widget\obj\Debug\netcoreapp2.0\AcmeWidget.AssemblyInfoInputs.cache
+C:\sourceCode\acme-widget\obj\Debug\netcoreapp2.0\AcmeWidget.AssemblyInfo.cs
+C:\sourceCode\acme-widget\obj\Debug\netcoreapp2.0\AcmeWidget.dll
+C:\sourceCode\acme-widget\obj\Debug\netcoreapp2.0\AcmeWidget.pdb

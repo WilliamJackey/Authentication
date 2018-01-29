@@ -1,0 +1,16 @@
+<p class="text">
+  You can get signed users as the following
+</p>
+
+<table class="table-content">
+  <tr>
+    <th>User Name</th>
+    <th>Activity</th>
+    <th>Comments</th>
+  </tr>
+  <tr *ngFor="let signedUser of signedUsers">
+    <td>{{ signedUser.firstName }} {{ signedUser.lastName }}</td>
+    <td>{{ signedUser.activity }}</td>
+    <td>{{ signedUser.comments }}</td>
+  </tr>
+</table>
