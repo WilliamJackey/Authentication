@@ -1,21 +1,17 @@
-// import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-
-import { Registration } from '../models/registration';
-import { SettingService } from '../utils/setting.service';
+import { Injectable } from '@angular/core';
 
 import { BaseService } from './base.service';
+import { Registration } from '../models/registration';
+import { SettingService } from '../utils/setting.service';
 
 // tslint:disable-next-line:import-blacklist
 import { Observable } from 'rxjs/Rx';
 // tslint:disable-next-line:import-blacklist
 import { BehaviorSubject } from 'rxjs/Rx';
-
 // Add the RxJS Observable operators we need in this app.
 // Statics
 import 'rxjs/add/observable/throw';
-
 // Operators
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';

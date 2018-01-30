@@ -1,9 +1,5 @@
-using AcmeWidget.ViewModels;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AcmeWidget.ViewModels;
 
 namespace AcmeWidget.Helpers.Validations
 {

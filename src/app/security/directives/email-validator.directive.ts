@@ -1,5 +1,5 @@
 import { Directive, forwardRef } from '@angular/core';
-import { NG_VALIDATORS, FormControl } from '@angular/forms';
+import { FormControl, NG_VALIDATORS } from '@angular/forms';
 
 function validateEmailFactory() {
   return (c: FormControl) => {

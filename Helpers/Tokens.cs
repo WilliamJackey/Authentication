@@ -1,9 +1,9 @@
-using AcmeWidget.Authentication;
-using AcmeWidget.Models;
-using Newtonsoft.Json;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using AcmeWidget.Authentication;
+using AcmeWidget.Models;
 
 namespace AcmeWidget.Helpers
 {

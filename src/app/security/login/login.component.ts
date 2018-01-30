@@ -1,12 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-// tslint:disable-next-line:import-blacklist
-import { Subscription } from 'rxjs';
-
 import { Credentials } from '../../shared/models/credentials';
 import { CredentialsService } from '../../shared/services/credentials.service';
 
+// tslint:disable-next-line:import-blacklist
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -51,7 +50,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         .subscribe(
         result => {
           if (result) {
-             this.router.navigate(['/subscribe']);
+             this.router.navigate(['/activity']);
           }
         },
         error => this.errors = error);

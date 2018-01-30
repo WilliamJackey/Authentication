@@ -7,12 +7,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AuthenticateXHRBackend } from './authenticate-xhr.backend';
+import { LoginComponent } from './security/login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { RegistrateComponent } from './security/registrate/registrate.component';
 import { SecurityModule } from './security/security.module';
+import { SettingService } from './shared/utils/setting.service';
 import { SharedModule } from './shared/shared.module';
 import { SubscribeModule } from './subscribe/subscribe.module';
-import { SettingService } from './shared/utils/setting.service';
+
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { SettingService } from './shared/utils/setting.service';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: 'login', component: RegistrateComponent },
+      { path: 'login', component: LoginComponent },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: '**', redirectTo: 'login', pathMatch: 'full' },
     ], {useHash: true}),

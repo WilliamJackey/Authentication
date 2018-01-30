@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer, OnInit } from '@angular/core';
+import { Directive, ElementRef, OnInit, Renderer } from '@angular/core';
 
 @Directive({ selector: '[appFocus]' })
 

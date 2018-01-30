@@ -10,13 +10,11 @@ import { SubscribeService } from '../../shared/services/subscribe.service';
 })
 export class SubscriptionComponent implements OnInit {
   error: string;
-
   signedUsers: SignedUsers;
 
   constructor(private subscribeService: SubscribeService) { }
 
   ngOnInit() {
-
     this.subscribeService.getSignedUsers()
     .subscribe((signedUsers: SignedUsers) => {
       this.signedUsers = signedUsers;
@@ -24,7 +22,6 @@ export class SubscriptionComponent implements OnInit {
     error => {
       this.error = error;
     });
-
   }
 }
 

@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using AcmeWidget.Data;
+using AcmeWidget.Helpers;
 using AcmeWidget.Models.Entities;
 using AcmeWidget.ViewModels;
-using AcmeWidget.Helpers;
 
 namespace AcmeWidget.Controllers
 {
@@ -44,5 +44,5 @@ namespace AcmeWidget.Controllers
 
             return new OkObjectResult("Account created");
         }
-    }
+  }
 }

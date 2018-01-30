@@ -3,6 +3,7 @@ using System.Net;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,7 +22,6 @@ using AcmeWidget.Extensions;
 using AcmeWidget.Helpers;
 using AcmeWidget.Models;
 using AcmeWidget.Models.Entities;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace AcmeWidget
 {
@@ -35,8 +35,7 @@ namespace AcmeWidget
         }
 
         public IConfiguration Configuration { get; }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+
         public void ConfigureServices(IServiceCollection services)
         {
           // Add framework services.
@@ -57,7 +56,7 @@ namespace AcmeWidget
           {
             options.Issuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
             options.Audience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)];
-            options.SigningCredentials = new SigningCredentials(_symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
+            options.SigningCredentials = new SigningCredentials(_symmetricSecurityKey, SecurityAlgorithms.HmacSha512);
           });
 
           var corsBuilder = new CorsPolicyBuilder();
@@ -149,6 +148,7 @@ namespace AcmeWidget
                           });
               });
 
+          app.UseCors("SiteCorsPolicy");
           app.UseAuthentication();
           app.UseDefaultFiles();
           app.UseStaticFiles();

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Registration } from '../../shared/models/registration';
 import { CredentialsService } from '../../shared/services/credentials.service';
+import { Registration } from '../../shared/models/registration';
 
 @Component({
   selector: 'app-registrate',

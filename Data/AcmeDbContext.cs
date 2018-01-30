@@ -6,11 +6,11 @@ namespace AcmeWidget.Data
 {
     public class AcmeDbContext : IdentityDbContext<AuthenticationUser>
     {
-    public AcmeDbContext(DbContextOptions options)
-            : base(options)
-        {
-    }
+      public AcmeDbContext(DbContextOptions options)
+              : base(options)
+      {
+      }
 
-    public DbSet<AcmeUser> AcmeUsers { get; set; }
-  }
+      public DbSet<AcmeUser> AcmeUsers { get; set; }
+    }
 }

@@ -1,15 +1,15 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using AcmeWidget.Authentication;
+using AcmeWidget.Helpers;
 using AcmeWidget.Models;
 using AcmeWidget.Models.Entities;
 using AcmeWidget.ViewModels;
-using AcmeWidget.Helpers;
-using Microsoft.AspNetCore.Cors;
 
 namespace AcmeWidget.Controllers
 {
@@ -67,5 +67,6 @@ namespace AcmeWidget.Controllers
       // Credentials are invalid, or account doesn't exist
       return await Task.FromResult<ClaimsIdentity>(null);
     }
+
   }
 }

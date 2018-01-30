@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SettingService {
-   _apiURI: string;
+    _apiURI: string;
 
-   constructor() {
+    constructor() {
        this._apiURI = 'http://localhost:5000/api';
     }
 

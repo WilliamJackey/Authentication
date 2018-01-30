@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 
+import {BaseService} from '../../shared/services/base.service';
 import { SignedUsers } from '../models/signedusers';
 import { SettingService } from '../../shared/utils/setting.service';
 
-import {BaseService} from '../../shared/services/base.service';
-
 // tslint:disable-next-line:import-blacklist
 import { Observable } from 'rxjs/Rx';
-
 // Add the RxJS Observable operators we need in this app.
 // Statics
 import 'rxjs/add/observable/throw';
-
 // Operators
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
@@ -34,14 +31,15 @@ export class SubscribeService extends BaseService {
 
   getSignedUsers(): Observable<SignedUsers> {
       const headers = new Headers();
-      headers.append('Accept', 'application/json');
+      // headers.append('Accept', 'application/json');
+      headers.append('Content-Type', 'application/json');
       headers.append('Access-Control-Allow-Headers', '*');
       headers.append('Access-Control-Allow-Origin', '*');
       headers.append('Access-Control-Allow-Methods', 'GET');
       const authToken = localStorage.getItem('auth_token');
       headers.append('Authorization', `Bearer ${authToken}`);
 
-    return this.http.get(this.baseUrl + '/subscribe/get', {headers})
+    return this.http.get(this.baseUrl + '/activity/load', {headers})
       .map(response => response.json())
       .catch(this.handleError);
   }

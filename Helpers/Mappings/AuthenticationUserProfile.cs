@@ -1,6 +1,6 @@
+using AutoMapper;
 using AcmeWidget.Models.Entities;
 using AcmeWidget.ViewModels;
-using AutoMapper;
 
 namespace AcmeWidget.Helpers.Mappings
 {
